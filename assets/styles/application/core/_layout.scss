@@ -1,0 +1,42 @@
+.container {
+  max-width: 1066px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 $half-spacing-unit;
+
+  @media #{$small} {
+    padding: 0 $base-spacing-unit;
+  }
+
+  &--1050 {
+    max-width: 1050px;
+  }
+
+  &--950 {
+    max-width: 950px;
+  }
+
+  &--910 {
+    max-width: 910px;
+  }
+
+  &--890 {
+    max-width: 890px;
+  }
+
+  &--768 {
+    max-width: 768px;
+  }
+
+  &--710 {
+    max-width: 710px;
+  }
+
+  &--650 {
+    max-width: 650px;
+  }
+
+  &--550 {
+    max-width: 550px;
+  }
+}

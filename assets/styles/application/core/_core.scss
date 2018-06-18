@@ -1,0 +1,39 @@
+// * {
+//   @include box-sizing(border-box);
+//   &:before,
+//   &:after {
+//     @include box-sizing(border-box);
+//   }
+// }
+
+// Body reset
+
+html, body {
+  height: 100%;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Links
+
+a {
+  &:hover,
+  &:focus {
+    color: skyblue;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+

@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "main.js": {
+      "vendor": [
+        "magnific-popup",
+        "flexslider"
+      ],
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "vendor": [
+        "magnific-popup",
+        "flexslider"
+      ],
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "admin-style.css": {
+      "files": [
+        "styles/admin-styles.css"
+      ],
+      "main": false
+    }
+  },
+  "paths": {
+    "source": "assets/",
+    "dist": "dist/"
+  },
+  "config": {
+    "devUrl": "https://pokedex.dev/"
+  }
+}

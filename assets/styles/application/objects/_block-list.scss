@@ -1,0 +1,132 @@
+.block-list {
+  padding: 0;
+  margin: 0;
+  list-style:none;
+  li {
+    border-bottom: 1px solid rgba($warm-grey, 0.3);
+    margin: 0;
+    padding: 16px $base-spacing-unit 16px 0;
+  }
+  a {
+    display: block;
+    letter-spacing: -0.11px;
+    line-height: 15px;
+    position: relative;
+    &:after {
+      color: $color-text-body;
+      content: '\e906';
+      font-family: $font-family-icons;
+      position: absolute;
+      right: -$base-spacing-unit;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:hover {
+      &:after {
+        color: $color-brand;
+      }
+    }
+  } 
+}
+
+.block-list__link{
+  display:block;
+  padding:$half-spacing-unit;
+  margin:-$half-spacing-unit;
+}
+
+.block-list--sides{
+  > li{
+    border-bottom-width:1px;
+    padding-left:$padding-base-horizontal;
+    padding-right:$padding-base-horizontal;
+  }
+
+  .block-list__link{
+    display:block;
+    padding:$padding-base-vertical $padding-base-horizontal;
+    margin: $padding-base-vertical * -1 $padding-base-horizontal * -1;
+  }
+}
+
+.block-list--onbordered{
+  border-top-width: 0;
+  > li{
+    border-bottom-width: 0;
+  }
+}
+
+#recentcomments {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  &,
+  > li{
+    border:0 solid $brand-ui;
+  }
+}
+
+.photo-upload__container{
+  background-image: url('/assets/new/upload-container.jpg');
+  border: 1px solid $gray-lighter;
+  height: 390px;
+}
+
+.photo-upload{
+  @include rem(14);
+  text-align: center;
+  padding-top: em(17, 14);
+  display: inline-block;
+  width: em(190px, 14);
+  height: em(100px, 14);
+}
+.photo-upload__figure{
+  font-size: em(35, 14);
+}
+.photo-upload--default{
+  background-color: white;
+  border-radius: $border-radius-base;
+  border: 1px solid $gray-lighter;
+  color: $brand-success;
+  font-weight: 700;
+}
+
+.vertical--align{
+  &:before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    margin-left: -4px;
+  }
+}
+.vertical--align__content{
+  display: inline-block;
+}
+
+.file-skin{
+  cursor: pointer;
+  & + [type="file"]{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0 ;
+    background: transparent;
+  }
+}
+
+
+.provider__description{
+  height: 400px;
+  overflow-y: auto;
+}
+
+.list-titled{
+  display: block;
+}
+.list-titled__title{
+  display: inline-block;
+  width: em(90);
+}

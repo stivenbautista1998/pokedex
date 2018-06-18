@@ -1,0 +1,83 @@
+{% extends 'layouts/base.twig' %}
+
+{% block header %}
+  {% include 'partials/header.twig' %}
+{% endblock %}
+
+{% block content %}
+  <section class="section-single wrapper">
+      <div class="grid">
+        <div class="grid__item three-twelfths">
+          <section class="section-pokemon">
+            <div class="section-pokemon__front">
+              <img class="section-pokemon__img" src="{{post.thumbnail}}" alt="Image Pokemon">
+              <span class="">{{post.title}}</span>
+              <div>
+                {% if post.pokemon_number | length == 1 %}
+                  <span class="section-pokemon__id">#00{{post.pokemon_number}}</span>
+                {% elseif post.pokemon_number | length == 2 %}
+                  <span class="section-pokemon__id">#0{{post.pokemon_number}}</span>
+                {% else %}
+                  <span class="section-pokemon__id">#{{post.pokemon_number}}</span>
+                {% endif %}              
+              </div>
+              <span class="js-id-pokemon sr-only">{{post.pokemon_number}}</span>
+            </div>
+            {% set categ = function ('wp_get_post_terms', post.id, 'element') %}
+            <div class="section-pokemon__elements">
+              {% for item in categ %}
+                <div class="section-pokemon__elements-item">{{item.slug}}</div>
+              {% endfor %}
+            </div>
+          </section>
+        </div><div class="grid__item nine-twelfths">
+          <section class="section-tab">
+              <h1 class="sr-only">Section Tab</h1>
+
+              <div class="section-tab__header">
+                <div class="js-tab-header-stat section-tab__stats open-tab">Stats</div>
+                <div class="js-tab-header-ability section-tab__abilities">Abilities</div>
+                <div class="js-tab-header-type section-tab__type">Type Effectivenes</div>
+              </div>
+              <div class="js-section-tab__content section-tab__content">
+                <div class="js-tab-stats"></div>
+                <div class="js-tab-abilities sr-only"></div>
+                <div class="js-tab-types sr-only">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <div class="damage-item">Normal: <span>100%</span></div>
+                      <div class="damage-item">Fighting: <span>100%</span></div>
+                      <div class="damage-item">Flying: <span>100%</span></div>
+                      <div class="damage-item">Poison: <span>100%</span></div>
+                      <div class="damage-item">Ground: <span>100%</span></div>
+                      <div class="damage-item">Rock: <span>100%</span></div>
+                    </div><div class="grid__item one-third">
+                      <div class="damage-item">Bug: <span>100%</span></div>
+                      <div class="damage-item">Ghost: <span>100%</span></div>
+                      <div class="damage-item">Steel: <span>100%</span></div>
+                      <div class="damage-item">Fire: <span>100%</span></div>
+                      <div class="damage-item">Water: <span>100%</span></div>
+                      <div class="damage-item">Grass: <span>100%</span></div>
+                    </div><div class="grid__item one-third">
+                      <div class="damage-item">Electric: <span>100%</span></div>
+                      <div class="damage-item">Psychic: <span>100%</span></div>
+                      <div class="damage-item">Ice: <span>100%</span></div>
+                      <div class="damage-item">Dragon: <span>100%</span></div>
+                      <div class="damage-item">Darck: <span>100%</span></div>
+                      <div class="damage-item">Fairy: <span>100%</span></div>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                </div>
+              </div>
+          </section>
+        </div>
+      </div>
+  </section>
+{% endblock %}
+
+{% block footer %}
+  {% include 'partials/footer.twig' %}
+{% endblock %}

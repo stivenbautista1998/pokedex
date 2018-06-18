@@ -1,0 +1,55 @@
+.grid{
+  @extend %grid;
+}
+
+.grid--middle{
+  @extend %grid--middle;
+}
+
+.grid--full{
+  @extend %grid--full;
+}
+
+.grid__item{
+  @extend %grid__item;
+}
+
+.one-sixth{
+  @extend %one-sixth;
+}
+
+.four-sixths{
+  @extend %four-sixths;
+}
+
+.one-half{
+  @extend %one-half;
+}
+
+.one-quarter{
+  @extend %one-quarter;
+}
+
+.one-third{
+  @extend %one-third;
+}
+
+.two-thirds{
+  @extend %two-thirds;
+}
+
+.one-fifth{
+  @extend %one-fifth;
+}
+
+.four-fifths{
+  @extend %four-fifths;
+}
+
+.medium--one-fifth{
+  @extend %one-fifth;
+}
+
+.medium--four-fifths{
+  @extend %four-fifths;
+}

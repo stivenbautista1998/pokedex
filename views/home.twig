@@ -1,0 +1,30 @@
+{% extends 'layouts/base.twig' %}
+
+{% block header %}
+  {% include 'partials/header.twig' %}
+{% endblock %}
+
+{% block content %}
+
+{% if post_pokemon %}
+  {% for pokemon in post_pokemon %}    
+    <p>{{dump(pokemon)}}</p>
+
+    <p>Titulo: {{pokemon.post_title}}</p>
+    <p>ID: {{pokemon.pokemon_number}}</p>
+
+    {% set categ = function ('wp_get_post_terms', pokemon.ID, 'element') %}
+
+    <p>Elements: {% for item in categ %} {{item.name}} {% endfor %}</p>
+
+    <a href="{{pokemon.guid}}" target="_blank">
+      <img src="{{ function( 'get_the_post_thumbnail_url', pokemon.ID) }}" alt="Image pokemon">
+    </a>
+  {% endfor %}
+{% endif %}
+
+{% endblock %}
+
+{% block footer %}
+  {% include 'partials/footer.twig' %}
+{% endblock %}

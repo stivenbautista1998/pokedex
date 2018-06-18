@@ -1,0 +1,43 @@
+$gray-base:             #000 !default;
+$gray-darker:           lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:             lighten($gray-base, 20%) !default;   // #333
+$gray:                  lighten($gray-base, 33.5%) !default; // #555
+$gray-light:            lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:          #F7F7F7 !default;
+
+$brand-primary:         #BA1C30 !default; 
+$brand-secondary:       #E30613 !default;
+$brand-darker:          #B51F22 !default;
+$brand-lighter:         #00B2F5 !default;
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+$brand-ui:              #DFDFDF;
+$brand-default:         #DFDFDF;
+
+$black:                 #333333;
+$charcoal-grey:         #2F3B45;
+$coral:                 #FB4946;
+$cream:                 #F4F4F4;
+$dark:                  #2A353E;
+$dodger-blue:           #347FF7;
+$pinkish-grey:          #C2C2C2;
+$warm-grey-light:       #999999;
+$warm-grey:             #777777;
+$white:                 #FFFFFF;
+$dark-white:            #FBFBFB;
+$darker-white:          #F9F9F9;
+$dark-gray:             #4A4A4A;
+$light-gray:            #9B9B9B;
+$lighter-gray:          #EAEAEA;
+$lightest-gray:         #E4E4E4;
+
+$color-brand:           $brand-primary;
+
+$body-bg:               $white;
+$hr-border:             $gray-lighter;
+$link-color:            $color-brand;
+$link-hover-color:      darken($link-color, 15%);
+$color-text-body:       $light-gray;
+$main-footer-color:     #D8D8D8;
